@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="ismingz">
+    <input type="password" name="password1" placeholder="parol">
+     <input type="password" name="password2" placeholder="parol takroran kiritng">
+    <button type="submit" >TIZIMGA KIRISH UCHUN RO'YHATDAN O'TISH</button>
+
+ {% include 'components/_messages.html' %}
+
+
+
+    </form>
+{% endblock content %}

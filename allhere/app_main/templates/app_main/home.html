@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+       <h1>BOW SAHIFA</h1>
+
+  {% if request.user.is_superuser %}
+    <a href="/users/">Barcha foydalanuvchilar</a>
+   {% endif %}
+    <br>
+    <a hred="">shaxsiy kabinet</a>
+    <br>
+    <br>
+    <a href="/users/logout/">TIZIMDAN CHIQISH UCHUN</a>
+
+
+  {% include 'components/_messages.html' %}
+{% endblock content %}
