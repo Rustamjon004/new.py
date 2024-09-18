@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -36,7 +36,6 @@ def user_logout(request):
 
 
 def user_registration(request):
-
     if request.method == "POST":
         username = request.POST.get("username")
         password1 = request.POST.get("password1")
@@ -46,10 +45,10 @@ def user_registration(request):
             messages.error(request, "Username bo'sh bo'lishi mumkin emas")
             return redirect("/users/login/")
 
-        user_exists = len(User.objects.filter(username=username)) == 1
+        user_exists = User.objects.filter(username=username).exists()
 
         if not user_exists:
-            if (password1 == password2):
+            if password1 == password2:
                 user = User.objects.create(username=username)
                 user.set_password(raw_password=password2)
                 user.save()
@@ -60,7 +59,7 @@ def user_registration(request):
                 return redirect("/users/registration/")
         else:
             messages.error(request, "Username allaqachon olingan")
-            return redirect("/users/registration/")
+            return redirect(reverse("/users/registration/"))
 
     return render(request, "app_users/registration.html")
 

@@ -1,10 +1,17 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> MY WEBSITE </title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+    <title>MY WEBSITE</title>
 </head>
 <body>
-{% block content %} {% endblock content %}
+    {% include 'components/_nav..html'%}
+    <main class="container" >
+    {% block content %}
+    {% endblock content %}
+    </main>
+
 </body>
 </html>

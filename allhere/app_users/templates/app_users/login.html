@@ -1,19 +1,26 @@
+
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-    <form action="" method="post">
+    <form action="" method="post" class="login-form">
     {% csrf_token %}
-    <input type="text" name="username">
-    <input type="password" name="password">
-    <button type="submit" >TIZIMGA KIRISH</button>
 
+    <img src="{% static 'images/login.bg.jpg' %}">
+
+
+        <div class="login-form">
+        <div class="login-form-inner">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit" >TIZIMGA KIRISH</button>
+        </div>
+        </div>
     <br>
     <br>
      <p>akkaunt bulmasa
-         <a href="/users/registrations">malumotlarni kiriting</a>
+         <a href="/users/registration/">malumotlarni kiriting</a>
      </p>
-
- {% include 'components/_messages.html' %}
+        {% include 'components/_messages.html' %}
 
 
 

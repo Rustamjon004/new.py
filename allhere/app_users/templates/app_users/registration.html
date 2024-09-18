@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-    <form action="" method="post">
+    <form action="" method="post" class="registration-form">
     {% csrf_token %}
-    <input type="text" name="username" placeholder="ismingz">
-    <input type="password" name="password1" placeholder="parol">
-     <input type="password" name="password2" placeholder="parol takroran kiritng">
-    <button type="submit" >TIZIMGA KIRISH UCHUN RO'YHATDAN O'TISH</button>
+    <img src="{% static 'images/registration.jpg' %}" alt="">
 
+ <div class="card">
+    <div  class="registration-form-inner "   >
+        <h3> TIZIMGA KIRISH UCHUN </h3>
+        <input type="text" name="username" placeholder="ismingz">
+        <input type="password" name="password1" placeholder="parol">
+        <input type="password" name="password2" placeholder="parol takroran kiritng">
+        <button type="submit" >TIZIMGA KIRISH UCHUN RO'YHATDAN O'TISH</button>
+    </div>
+</div>
  {% include 'components/_messages.html' %}
 
 

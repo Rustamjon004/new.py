@@ -1,0 +1,113 @@
+button {
+    color: red;
+}
+.card {
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.registration-form {
+    height: 800px;
+         background: url('../images/new.jpg') no-repeat center center;
+     background-size : cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+a{text-decoration:none;
+color: crimson}
+.registration-form-inner p{
+    text-align: center;
+}
+.registration-form-inner h3{
+     letter-spacing: 15px; /
+    text-transform: uppercase; /
+    font-weight: bold;
+}
+
+.registration-form-inner{
+    width: 30%;
+    display: flex;
+    flex-direction: column ;
+    gap: 20px ;
+}
+.registration-form-inner input{
+    width: 300%;
+    border:1px; solid-color: black;
+    padding: 8px 16px;
+    outline:none;
+    border-radius: 8px;
+
+}
+.registration-form-inner input:focus{
+    border-color: blue;
+}
+.registration-form-inner button{
+    width: 300%;
+    transition: 0.2s;
+    border-color: darkgreen;
+    background: darkgreen;
+    color: aliceblue;
+    border-radius:16px ;
+}
+
+.registration-form-inner button:active{
+    scale: 0.9%;
+}
+
+.login-form {
+    height: 100vh; /* Sahifa balandligini egallash */
+    display: flex;
+    justify-content: center; /* Gorizontal markazlashtirish */
+    align-items: center; /* Vertikal markazlashtirish */
+    background: url('../images/login.bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.login-form-inner {
+    display: flex;
+    flex-direction: column; /* Elementlarni ustma-ust joylash */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* O'rtaga joylashgan holda kenglikni belgilang */
+    max-width: 800px; /* Maksimal kenglik berishingiz mumkin */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+input, button {
+    transition: 0.2s;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px 0;
+    border-radius: 16px;
+}
+
+/* NAV UCHUN CSS */
+.container{
+    width:1100px;
+    margin:auto;
+    justify-content: space-between;
+}
+nav{
+    padding:20px 0;
+    background-color: deepskyblue;
+}
+.container div {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+
+}
